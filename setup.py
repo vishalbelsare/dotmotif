@@ -11,7 +11,7 @@ python setup.py sdist
 twine upload dist/*
 """
 
-VERSION = "0.13.0"
+VERSION = "0.15.0"
 
 here = os.path.abspath(os.path.dirname(__file__))
 with io.open(os.path.join(here, "README.md"), encoding="utf-8") as f:
@@ -35,15 +35,14 @@ setup(
         "numpy",
         "lark-parser",
         "pandas",
-        "grandiso>=2.0.0",
+        "grandiso>=2.1.0",
     ],
     extras_require={
         "neo4j": [
-            "docker",
-            "tamarind>=0.1.5",
             "py2neo",
         ],
         "neuprint": [
+            "py2neo",
             "neuprint-python",
         ],
     },
